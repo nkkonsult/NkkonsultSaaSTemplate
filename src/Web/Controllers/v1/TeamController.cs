@@ -20,7 +20,7 @@ public class TeamController : ControllerBase
     }
 
     [HttpGet]
-    [Authorize(Roles = "Patron,AdminSysteme")]
+    [Authorize(Roles = "Owner,SystemAdmin")]
     public async Task<IActionResult> GetTeam(CancellationToken ct)
     {
         var result = await _mediator.Send(new GetTeamMembersQuery(), ct);
@@ -28,7 +28,7 @@ public class TeamController : ControllerBase
     }
 
     [HttpPost("invite")]
-    [Authorize(Roles = "Patron")]
+    [Authorize(Roles = "Owner")]
     public async Task<IActionResult> InviteTechnician([FromBody] InviteTechnicianRequest request, CancellationToken ct)
     {
         var id = await _mediator.Send(new InviteTechnicianCommand(request.Email), ct);
@@ -52,7 +52,7 @@ public class TeamController : ControllerBase
     }
 
     [HttpDelete("{userId:guid}")]
-    [Authorize(Roles = "Patron")]
+    [Authorize(Roles = "Owner")]
     public async Task<IActionResult> RemoveTechnician(Guid userId, CancellationToken ct)
     {
         await _mediator.Send(new RemoveTechnicianCommand(userId), ct);

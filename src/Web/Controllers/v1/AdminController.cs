@@ -38,8 +38,7 @@ public class AdminController : ControllerBase
                 t.Siret,
                 t.OwnerEmail,
                 t.SubscriptionStatus,
-                t.TrialEndDate,
-                t.InterventionCount)).ToList(),
+                t.TrialEndDate)).ToList(),
             result.TotalCount,
             result.PageNumber,
             result.PageSize);
@@ -72,7 +71,6 @@ public class AdminController : ControllerBase
             result.Siret,
             result.OwnerEmail,
             result.SubscriptionStatus,
-            result.TrialEndDate,
-            result.InterventionCount));
+            result.TrialEndDate));
     }
 }

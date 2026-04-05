@@ -28,8 +28,7 @@ public class AuthController : ControllerBase
         var result = await _mediator.Send(new RegisterCommand(
             request.Email,
             request.Password,
-            request.CompanyName,
-            request.TradeIds));
+            request.CompanyName));
 
         if (result is null)
         {

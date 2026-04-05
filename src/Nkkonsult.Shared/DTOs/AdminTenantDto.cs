@@ -6,5 +6,4 @@ public record AdminTenantDto(
     string Siret,
     string OwnerEmail,
     string SubscriptionStatus,  // "essai" | "actif" | "expiré"
-    DateTime TrialEndDate,
-    int InterventionCount);
+    DateTime TrialEndDate);
