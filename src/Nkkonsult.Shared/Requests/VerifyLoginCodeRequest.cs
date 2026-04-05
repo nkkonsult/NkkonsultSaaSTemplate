@@ -1,0 +1,3 @@
+namespace Hoplo.Shared.Requests;
+
+public record VerifyLoginCodeRequest(string Email, string Code);
