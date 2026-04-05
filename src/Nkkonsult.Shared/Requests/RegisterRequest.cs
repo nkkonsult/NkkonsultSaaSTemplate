@@ -4,6 +4,5 @@ namespace Hoplo.Shared.Requests;
 public record RegisterRequest(
     string Email,
     string Password,
-    string? CompanyName,
-    int[] TradeIds
+    string? CompanyName
 );

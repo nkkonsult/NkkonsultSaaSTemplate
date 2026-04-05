@@ -3,7 +3,7 @@ using Hoplo.Application.Common.Interfaces;
 namespace Hoplo.Application.Auth.Commands;
 
 // T5.1 — RegisterCommand : crée Tenant + ApplicationUser + période d'essai 60j
-public record RegisterCommand(string Email, string Password, string? CompanyName, int[] TradeIds)
+public record RegisterCommand(string Email, string Password, string? CompanyName)
     : IRequest<AuthResult?>, ISensitiveRequest
 {
     public IReadOnlyList<string> SensitiveProperties => ["Password"];
@@ -20,6 +20,6 @@ public class RegisterCommandHandler : IRequestHandler<RegisterCommand, AuthResul
 
     public async ValueTask<AuthResult?> Handle(RegisterCommand request, CancellationToken cancellationToken)
     {
-        return await _authService.RegisterAsync(request.Email, request.Password, request.CompanyName, request.TradeIds);
+        return await _authService.RegisterAsync(request.Email, request.Password, request.CompanyName);
     }
 }

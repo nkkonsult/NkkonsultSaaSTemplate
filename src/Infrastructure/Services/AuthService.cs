@@ -29,7 +29,7 @@ public class AuthService : IAuthService
 
     // T5.1 — Inscription : crée Tenant + ApplicationUser avec période d'essai 60j
     // Transaction explicite : évite les Tenants orphelins si CreateAsync échoue
-    public async Task<AuthResult?> RegisterAsync(string email, string password, string? companyName, int[] tradeIds)
+    public async Task<AuthResult?> RegisterAsync(string email, string password, string? companyName)
     {
         // Vérifier email unique
         var existing = await _userManager.FindByEmailAsync(email);

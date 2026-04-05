@@ -18,8 +18,8 @@ public record AuthResult(
 /// </summary>
 public interface IAuthService
 {
-    /// <summary>Inscrit un nouveau serrurier : crée Tenant + ApplicationUser + tokens.</summary>
-    Task<AuthResult?> RegisterAsync(string email, string password, string? companyName, int[] tradeIds);
+    /// <summary>Inscrit un nouvel utilisateur : crée Tenant + ApplicationUser + tokens.</summary>
+    Task<AuthResult?> RegisterAsync(string email, string password, string? companyName);
 
     /// <summary>Connecte un utilisateur et retourne les tokens si les credentials sont valides.</summary>
     Task<AuthResult?> LoginAsync(string email, string password);
