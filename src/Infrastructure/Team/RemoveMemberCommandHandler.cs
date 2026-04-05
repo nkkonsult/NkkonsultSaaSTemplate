@@ -8,20 +8,20 @@ using Mediator;
 
 namespace Nkkonsult.Infrastructure.Team;
 
-public class RemoveTechnicianCommandHandler : IRequestHandler<RemoveTechnicianCommand>
+public class RemoveMemberCommandHandler : IRequestHandler<RemoveMemberCommand>
 {
     private readonly AppDbContext _context;
     private readonly IUser _currentUser;
 
-    public RemoveTechnicianCommandHandler(AppDbContext context, IUser currentUser)
+    public RemoveMemberCommandHandler(AppDbContext context, IUser currentUser)
     {
         _context = context;
         _currentUser = currentUser;
     }
 
-    public async ValueTask<Unit> Handle(RemoveTechnicianCommand request, CancellationToken cancellationToken)
+    public async ValueTask<Unit> Handle(RemoveMemberCommand request, CancellationToken cancellationToken)
     {
-        // M2 — Protection self-delete : un Owner ne peut pas se retirer lui-même
+        // Protection self-delete : un Owner ne peut pas se retirer lui-même
         if (Guid.TryParse(_currentUser.Id, out var currentUserId) && currentUserId == request.UserId)
             throw new InvalidOperationException("Un patron ne peut pas se retirer de sa propre équipe.");
 
@@ -31,9 +31,9 @@ public class RemoveTechnicianCommandHandler : IRequestHandler<RemoveTechnicianCo
 
         Guard.Against.NotFound(request.UserId, user);
 
-        // M2 — Vérification de rôle : seuls les Members peuvent être retirés
+        // Vérification de rôle : seuls les Members peuvent être retirés
         if (user.Role != UserRole.Member)
-            throw new InvalidOperationException("Seuls les techniciens peuvent être retirés de l'équipe.");
+            throw new InvalidOperationException("Seuls les membres peuvent être retirés de l'équipe.");
 
         user.IsActive = false;
         await _context.SaveChangesAsync(cancellationToken);

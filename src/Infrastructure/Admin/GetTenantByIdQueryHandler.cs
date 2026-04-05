@@ -40,7 +40,6 @@ public class GetTenantByIdQueryHandler : IRequestHandler<GetTenantByIdQuery, Adm
             tenant.Siret,
             ownerEmail,
             AdminSubscriptionHelper.GetSubscriptionStatus(tenant.IsActive, tenant.TrialEndDate),
-            tenant.TrialEndDate,
-            0);  // InterventionCount = 0 jusqu'à la création de l'entité Intervention (Sprint 2)
+            tenant.TrialEndDate);
     }
 }

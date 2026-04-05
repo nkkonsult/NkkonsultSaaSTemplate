@@ -9,8 +9,7 @@ public record AdminTenantResult(
     string Siret,
     string OwnerEmail,
     string SubscriptionStatus,
-    DateTime TrialEndDate,
-    int InterventionCount);
+    DateTime TrialEndDate);
 
 public record GetAllTenantsQueryResult(
     IReadOnlyCollection<AdminTenantResult> Items,

@@ -57,8 +57,7 @@ public class GetAllTenantsQueryHandler : IRequestHandler<GetAllTenantsQuery, Get
                 x.Tenant.Siret,
                 x.OwnerEmail,
                 AdminSubscriptionHelper.GetSubscriptionStatus(x.Tenant.IsActive, x.Tenant.TrialEndDate),
-                x.Tenant.TrialEndDate,
-                0))  // InterventionCount = 0 jusqu'à la création de l'entité Intervention (Sprint 2)
+                x.Tenant.TrialEndDate))
             .ToListAsync(cancellationToken);
 
         return new GetAllTenantsQueryResult(items, totalCount, request.Page, request.PageSize);
