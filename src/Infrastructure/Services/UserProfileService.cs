@@ -1,8 +1,8 @@
-using Hoplo.Application.Common.Interfaces;
-using Hoplo.Infrastructure.Identity;
+using Nkkonsult.Application.Common.Interfaces;
+using Nkkonsult.Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity;
 
-namespace Hoplo.Infrastructure.Services;
+namespace Nkkonsult.Infrastructure.Services;
 
 public class UserProfileService : IUserProfileService
 {

@@ -1,8 +1,8 @@
 using System.Security.Claims;
-using Hoplo.Application.Common.Interfaces;
+using Nkkonsult.Application.Common.Interfaces;
 using Microsoft.AspNetCore.Http;
 
-namespace Hoplo.Infrastructure.Services;
+namespace Nkkonsult.Infrastructure.Services;
 
 public class CurrentUserService : ICurrentUserService
 {

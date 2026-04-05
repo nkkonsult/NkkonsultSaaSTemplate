@@ -1,4 +1,4 @@
-namespace Hoplo.Infrastructure.Data;
+namespace Nkkonsult.Infrastructure.Data;
 
 // T3.3 — Entité RefreshToken persistée en base
 public class RefreshToken

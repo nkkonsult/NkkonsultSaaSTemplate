@@ -1,6 +1,6 @@
-using ValidationException = Hoplo.Application.Common.Exceptions.ValidationException;
+using ValidationException = Nkkonsult.Application.Common.Exceptions.ValidationException;
 
-namespace Hoplo.Application.Common.Behaviours;
+namespace Nkkonsult.Application.Common.Behaviours;
 
 public class ValidationBehaviour<TMessage, TResponse> : IPipelineBehavior<TMessage, TResponse>
     where TMessage : notnull, IMessage

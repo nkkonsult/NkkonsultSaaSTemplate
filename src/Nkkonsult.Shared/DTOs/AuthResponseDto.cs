@@ -1,4 +1,4 @@
-namespace Hoplo.Shared.DTOs;
+namespace Nkkonsult.Shared.DTOs;
 
 // T7.1 — DTO de réponse auth uniforme (access + refresh token)
 public record AuthResponseDto(

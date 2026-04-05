@@ -1,4 +1,4 @@
-namespace Hoplo.Shared.DTOs;
+namespace Nkkonsult.Shared.DTOs;
 
 public record UserProfileDto(
     Guid Id, string Email, string FirstName, string LastName,

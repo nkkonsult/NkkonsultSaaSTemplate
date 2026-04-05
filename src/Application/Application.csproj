@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <RootNamespace>Hoplo.Application</RootNamespace>
-    <AssemblyName>Hoplo.Application</AssemblyName>
+    <RootNamespace>Nkkonsult.Application</RootNamespace>
+    <AssemblyName>Nkkonsult.Application</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,7 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
-    <ProjectReference Include="..\Hoplo.Shared\Hoplo.Shared.csproj" />
+    <ProjectReference Include="..\Nkkonsult.Shared\Nkkonsult.Shared.csproj" />
   </ItemGroup>
 
 </Project>

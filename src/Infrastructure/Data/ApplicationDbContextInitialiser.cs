@@ -1,12 +1,12 @@
-using Hoplo.Domain.Constants;
-using Hoplo.Infrastructure.Identity;
+using Nkkonsult.Domain.Constants;
+using Nkkonsult.Infrastructure.Identity;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace Hoplo.Infrastructure.Data;
+namespace Nkkonsult.Infrastructure.Data;
 
 public static class InitialiserExtensions
 {

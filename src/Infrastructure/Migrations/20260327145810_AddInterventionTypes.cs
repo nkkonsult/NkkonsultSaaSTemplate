@@ -4,7 +4,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-namespace Hoplo.Infrastructure.Migrations
+namespace Nkkonsult.Infrastructure.Migrations
 {
     /// <inheritdoc />
     public partial class AddInterventionTypes : Migration

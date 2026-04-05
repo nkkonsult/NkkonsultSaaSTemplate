@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <RootNamespace>Hoplo.Domain</RootNamespace>
-    <AssemblyName>Hoplo.Domain</AssemblyName>
+    <RootNamespace>Nkkonsult.Domain</RootNamespace>
+    <AssemblyName>Nkkonsult.Domain</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>

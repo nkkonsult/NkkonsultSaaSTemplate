@@ -1,8 +1,8 @@
 using System.Security.Claims;
-using Hoplo.Application.Common.Interfaces;
+using Nkkonsult.Application.Common.Interfaces;
 using Microsoft.AspNetCore.Http;
 
-namespace Hoplo.Infrastructure.Services;
+namespace Nkkonsult.Infrastructure.Services;
 
 // T3.2 — TenantService : lit tenantId depuis le claim JWT via IHttpContextAccessor
 public class TenantService : ITenantService

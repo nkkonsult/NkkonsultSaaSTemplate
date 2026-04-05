@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Hoplo.Domain.Common;
+namespace Nkkonsult.Domain.Common;
 
 public abstract class BaseEntity
 {

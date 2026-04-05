@@ -1,6 +1,6 @@
-using Hoplo.Application.Common.Interfaces;
+using Nkkonsult.Application.Common.Interfaces;
 
-namespace Hoplo.Application.Auth.Commands;
+namespace Nkkonsult.Application.Auth.Commands;
 
 // T5.2 — LoginCommand : valide credentials + génère tokens
 public record LoginCommand(string Email, string Password)

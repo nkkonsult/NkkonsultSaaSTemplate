@@ -1,4 +1,4 @@
-namespace Hoplo.Shared.DTOs;
+namespace Nkkonsult.Shared.DTOs;
 
 public record PagedResponseDto<T>(
     IReadOnlyCollection<T> Items,

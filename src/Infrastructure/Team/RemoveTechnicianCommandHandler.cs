@@ -1,12 +1,12 @@
 using Ardalis.GuardClauses;
-using Hoplo.Application.Common.Interfaces;
-using Hoplo.Application.Team.Commands;
-using Hoplo.Domain.Enums;
-using Hoplo.Infrastructure.Data;
+using Nkkonsult.Application.Common.Interfaces;
+using Nkkonsult.Application.Team.Commands;
+using Nkkonsult.Domain.Enums;
+using Nkkonsult.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Mediator;
 
-namespace Hoplo.Infrastructure.Team;
+namespace Nkkonsult.Infrastructure.Team;
 
 public class RemoveTechnicianCommandHandler : IRequestHandler<RemoveTechnicianCommand>
 {
@@ -32,7 +32,7 @@ public class RemoveTechnicianCommandHandler : IRequestHandler<RemoveTechnicianCo
         Guard.Against.NotFound(request.UserId, user);
 
         // M2 — Vérification de rôle : seuls les Techniciens peuvent être retirés
-        if (user.Role != UserRole.Technicien)
+        if (user.Role != UserRole.Member)
             throw new InvalidOperationException("Seuls les techniciens peuvent être retirés de l'équipe.");
 
         user.IsActive = false;

@@ -1,5 +1,5 @@
 using System.Reflection;
-using Hoplo.Application.Common.Behaviours;
+using Nkkonsult.Application.Common.Behaviours;
 using Microsoft.Extensions.Hosting;
 
 namespace Microsoft.Extensions.DependencyInjection;

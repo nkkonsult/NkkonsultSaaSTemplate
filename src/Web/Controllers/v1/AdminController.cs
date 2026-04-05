@@ -1,10 +1,10 @@
-using Hoplo.Application.Admin.Queries;
-using Hoplo.Shared.DTOs;
+using Nkkonsult.Application.Admin.Queries;
+using Nkkonsult.Shared.DTOs;
 using Mediator;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Hoplo.Web.Controllers.v1;
+namespace Nkkonsult.Web.Controllers.v1;
 
 [ApiController]
 [Route("api/v1/admin")]

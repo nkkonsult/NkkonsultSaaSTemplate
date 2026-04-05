@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace Hoplo.Web.Infrastructure;
+namespace Nkkonsult.Web.Infrastructure;
 
 public static class WebApplicationExtensions
 {

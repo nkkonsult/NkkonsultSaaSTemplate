@@ -4,7 +4,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-namespace Hoplo.Infrastructure.Data.Migrations
+namespace Nkkonsult.Infrastructure.Data.Migrations
 {
     /// <inheritdoc />
     public partial class AddArticlesPerTrade : Migration

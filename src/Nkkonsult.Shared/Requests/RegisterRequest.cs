@@ -1,4 +1,4 @@
-namespace Hoplo.Shared.Requests;
+namespace Nkkonsult.Shared.Requests;
 
 // T7.2 — Requête d'inscription
 public record RegisterRequest(

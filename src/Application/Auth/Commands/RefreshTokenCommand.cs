@@ -1,6 +1,6 @@
-using Hoplo.Application.Common.Interfaces;
+using Nkkonsult.Application.Common.Interfaces;
 
-namespace Hoplo.Application.Auth.Commands;
+namespace Nkkonsult.Application.Auth.Commands;
 
 // T5.3 — RefreshTokenCommand : rotation refresh token + nouveau pair de tokens
 public record RefreshTokenCommand(string RefreshToken)

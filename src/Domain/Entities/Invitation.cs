@@ -1,4 +1,4 @@
-namespace Hoplo.Domain.Entities;
+namespace Nkkonsult.Domain.Entities;
 
 public class Invitation
 {

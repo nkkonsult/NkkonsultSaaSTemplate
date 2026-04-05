@@ -1,11 +1,11 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Hoplo.Application.Tenants.Commands;
-using Hoplo.Application.Tenants.Queries;
-using Hoplo.Shared.DTOs;
-using Hoplo.Shared.Requests;
+using Nkkonsult.Application.Tenants.Commands;
+using Nkkonsult.Application.Tenants.Queries;
+using Nkkonsult.Shared.DTOs;
+using Nkkonsult.Shared.Requests;
 
-namespace Hoplo.Web.Controllers.v1;
+namespace Nkkonsult.Web.Controllers.v1;
 
 [ApiController]
 [Route("api/v1/tenants")]

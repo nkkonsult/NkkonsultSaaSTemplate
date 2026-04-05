@@ -1,4 +1,4 @@
-namespace Hoplo.Domain.Constants;
+namespace Nkkonsult.Domain.Constants;
 
 public abstract class Roles
 {

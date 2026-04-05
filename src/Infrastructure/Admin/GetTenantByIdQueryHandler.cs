@@ -1,10 +1,10 @@
-using Hoplo.Application.Admin.Queries;
-using Hoplo.Domain.Enums;
-using Hoplo.Infrastructure.Data;
+using Nkkonsult.Application.Admin.Queries;
+using Nkkonsult.Domain.Enums;
+using Nkkonsult.Infrastructure.Data;
 using Mediator;
 using Microsoft.EntityFrameworkCore;
 
-namespace Hoplo.Infrastructure.Admin;
+namespace Nkkonsult.Infrastructure.Admin;
 
 public class GetTenantByIdQueryHandler : IRequestHandler<GetTenantByIdQuery, AdminTenantResult?>
 {
@@ -30,7 +30,7 @@ public class GetTenantByIdQueryHandler : IRequestHandler<GetTenantByIdQuery, Adm
 
         var ownerEmail = await _context.Users
             .IgnoreQueryFilters()
-            .Where(u => u.TenantId == request.TenantId && u.Role == UserRole.Patron && u.IsActive)
+            .Where(u => u.TenantId == request.TenantId && u.Role == UserRole.Owner && u.IsActive)
             .Select(u => u.Email ?? string.Empty)
             .FirstOrDefaultAsync(cancellationToken) ?? string.Empty;
 

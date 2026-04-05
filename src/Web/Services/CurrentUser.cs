@@ -1,8 +1,8 @@
 ﻿using System.Security.Claims;
 
-using Hoplo.Application.Common.Interfaces;
+using Nkkonsult.Application.Common.Interfaces;
 
-namespace Hoplo.Web.Services;
+namespace Nkkonsult.Web.Services;
 
 public class CurrentUser : IUser
 {

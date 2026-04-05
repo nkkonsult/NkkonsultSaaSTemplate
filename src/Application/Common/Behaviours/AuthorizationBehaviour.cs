@@ -1,9 +1,9 @@
 using System.Reflection;
-using Hoplo.Application.Common.Exceptions;
-using Hoplo.Application.Common.Interfaces;
-using Hoplo.Application.Common.Security;
+using Nkkonsult.Application.Common.Exceptions;
+using Nkkonsult.Application.Common.Interfaces;
+using Nkkonsult.Application.Common.Security;
 
-namespace Hoplo.Application.Common.Behaviours;
+namespace Nkkonsult.Application.Common.Behaviours;
 
 public class AuthorizationBehaviour<TMessage, TResponse> : IPipelineBehavior<TMessage, TResponse>
     where TMessage : notnull, IMessage

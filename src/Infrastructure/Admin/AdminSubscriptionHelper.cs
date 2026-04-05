@@ -1,4 +1,4 @@
-namespace Hoplo.Infrastructure.Admin;
+namespace Nkkonsult.Infrastructure.Admin;
 
 internal static class AdminSubscriptionHelper
 {

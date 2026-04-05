@@ -1,4 +1,4 @@
-namespace Hoplo.Infrastructure.Data;
+namespace Nkkonsult.Infrastructure.Data;
 
 /// <summary>
 /// OTP code for passwordless login or password reset. Stored hashed, with expiration and attempt limit.

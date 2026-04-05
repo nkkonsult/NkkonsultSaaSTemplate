@@ -1,3 +1,3 @@
-namespace Hoplo.Shared.Requests;
+namespace Nkkonsult.Shared.Requests;
 
 public record ForgotPasswordRequest(string Email);

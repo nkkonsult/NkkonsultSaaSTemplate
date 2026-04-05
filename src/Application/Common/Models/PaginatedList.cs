@@ -1,4 +1,4 @@
-﻿namespace Hoplo.Application.Common.Models;
+﻿namespace Nkkonsult.Application.Common.Models;
 
 public class PaginatedList<T>
 {

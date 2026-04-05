@@ -1,10 +1,10 @@
 using Microsoft.EntityFrameworkCore;
-using Hoplo.Application.Common.Interfaces;
-using Hoplo.Domain.Entities;
-using Hoplo.Domain.Enums;
+using Nkkonsult.Application.Common.Interfaces;
+using Nkkonsult.Domain.Entities;
+using Nkkonsult.Domain.Enums;
 using Mediator;
 
-namespace Hoplo.Application.Team.Commands;
+namespace Nkkonsult.Application.Team.Commands;
 
 public record InviteMemberCommand(string Email) : IRequest<Guid>;
 

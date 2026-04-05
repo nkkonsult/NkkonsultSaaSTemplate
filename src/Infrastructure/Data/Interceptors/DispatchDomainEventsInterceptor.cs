@@ -1,9 +1,9 @@
-﻿using Hoplo.Domain.Common;
+﻿using Nkkonsult.Domain.Common;
 using Mediator;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 
-namespace Hoplo.Infrastructure.Data.Interceptors;
+namespace Nkkonsult.Infrastructure.Data.Interceptors;
 
 public class DispatchDomainEventsInterceptor : SaveChangesInterceptor
 {

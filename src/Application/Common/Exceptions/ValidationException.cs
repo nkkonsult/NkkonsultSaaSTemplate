@@ -1,6 +1,6 @@
 ﻿using FluentValidation.Results;
 
-namespace Hoplo.Application.Common.Exceptions;
+namespace Nkkonsult.Application.Common.Exceptions;
 
 public class ValidationException : Exception
 {

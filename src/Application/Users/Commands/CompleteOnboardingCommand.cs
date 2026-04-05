@@ -1,6 +1,6 @@
-using Hoplo.Application.Common.Interfaces;
+using Nkkonsult.Application.Common.Interfaces;
 
-namespace Hoplo.Application.Users.Commands;
+namespace Nkkonsult.Application.Users.Commands;
 
 public record CompleteOnboardingCommand : IRequest<Unit>;
 

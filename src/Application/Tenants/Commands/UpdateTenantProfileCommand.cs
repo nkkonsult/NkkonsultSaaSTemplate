@@ -1,7 +1,7 @@
-using Hoplo.Application.Common.Interfaces;
-using Hoplo.Domain.Entities;
+using Nkkonsult.Application.Common.Interfaces;
+using Nkkonsult.Domain.Entities;
 
-namespace Hoplo.Application.Tenants.Commands;
+namespace Nkkonsult.Application.Tenants.Commands;
 
 // T1.1 — Command + Handler : met à jour Name, Siret, LogoUrl du tenant courant
 // T1.3 — TenantId provient de ITenantService (jamais du body)

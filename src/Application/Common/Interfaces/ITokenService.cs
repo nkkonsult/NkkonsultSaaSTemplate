@@ -1,4 +1,4 @@
-namespace Hoplo.Application.Common.Interfaces;
+namespace Nkkonsult.Application.Common.Interfaces;
 
 public interface ITokenService
 {

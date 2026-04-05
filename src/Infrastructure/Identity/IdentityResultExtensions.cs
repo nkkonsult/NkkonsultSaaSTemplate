@@ -1,7 +1,7 @@
-﻿using Hoplo.Application.Common.Models;
+﻿using Nkkonsult.Application.Common.Models;
 using Microsoft.AspNetCore.Identity;
 
-namespace Hoplo.Infrastructure.Identity;
+namespace Nkkonsult.Infrastructure.Identity;
 
 public static class IdentityResultExtensions
 {

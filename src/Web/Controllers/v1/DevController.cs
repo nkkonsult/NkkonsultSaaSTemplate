@@ -1,8 +1,8 @@
-using Hoplo.Application.Common.Interfaces;
-using Hoplo.Infrastructure.Data;
+using Nkkonsult.Application.Common.Interfaces;
+using Nkkonsult.Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Hoplo.Web.Controllers.v1;
+namespace Nkkonsult.Web.Controllers.v1;
 
 /// <summary>
 /// Endpoints de développement — désactivés en production.

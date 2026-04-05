@@ -1,6 +1,6 @@
 using System.Security.Claims;
 
-namespace Hoplo.Web.Middleware;
+namespace Nkkonsult.Web.Middleware;
 
 // T4.1 — TenantMiddleware : valide cohérence role/tenant à chaque requête authentifiée
 public class TenantMiddleware

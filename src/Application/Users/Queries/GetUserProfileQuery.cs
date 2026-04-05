@@ -1,6 +1,6 @@
-using Hoplo.Application.Common.Interfaces;
+using Nkkonsult.Application.Common.Interfaces;
 
-namespace Hoplo.Application.Users.Queries;
+namespace Nkkonsult.Application.Users.Queries;
 
 public record GetUserProfileQuery : IRequest<UserProfileResult>;
 

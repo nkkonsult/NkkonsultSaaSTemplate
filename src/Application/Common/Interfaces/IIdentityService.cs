@@ -1,6 +1,6 @@
-﻿using Hoplo.Application.Common.Models;
+﻿using Nkkonsult.Application.Common.Models;
 
-namespace Hoplo.Application.Common.Interfaces;
+namespace Nkkonsult.Application.Common.Interfaces;
 
 public interface IIdentityService
 {

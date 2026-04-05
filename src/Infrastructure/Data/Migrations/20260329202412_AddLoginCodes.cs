@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Hoplo.Infrastructure.Data.Migrations
+namespace Nkkonsult.Infrastructure.Data.Migrations
 {
     /// <inheritdoc />
     public partial class AddLoginCodes : Migration

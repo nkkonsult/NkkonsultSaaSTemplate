@@ -1,7 +1,7 @@
-global using Hoplo.Domain.Common;
-global using Hoplo.Domain.Entities;
-global using Hoplo.Domain.Enums;
+global using Nkkonsult.Domain.Common;
+global using Nkkonsult.Domain.Entities;
+global using Nkkonsult.Domain.Enums;
 // Les namespaces suivants seront créés dans des stories futures :
-// global using Hoplo.Domain.Events;
-// global using Hoplo.Domain.Exceptions;
-// global using Hoplo.Domain.ValueObjects;
+// global using Nkkonsult.Domain.Events;
+// global using Nkkonsult.Domain.Exceptions;
+// global using Nkkonsult.Domain.ValueObjects;

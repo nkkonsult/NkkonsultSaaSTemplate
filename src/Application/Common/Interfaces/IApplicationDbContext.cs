@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using Hoplo.Domain.Entities;
+using Nkkonsult.Domain.Entities;
 
-namespace Hoplo.Application.Common.Interfaces;
+namespace Nkkonsult.Application.Common.Interfaces;
 
 public interface IApplicationDbContext
 {

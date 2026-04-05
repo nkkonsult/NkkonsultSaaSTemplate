@@ -1,6 +1,6 @@
 using Mediator;
 
-namespace Hoplo.Application.Admin.Queries;
+namespace Nkkonsult.Application.Admin.Queries;
 
 // Résultats internes — mappés en DTOs dans le contrôleur
 public record AdminTenantResult(

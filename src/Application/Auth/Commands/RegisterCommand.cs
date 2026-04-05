@@ -1,6 +1,6 @@
-using Hoplo.Application.Common.Interfaces;
+using Nkkonsult.Application.Common.Interfaces;
 
-namespace Hoplo.Application.Auth.Commands;
+namespace Nkkonsult.Application.Auth.Commands;
 
 // T5.1 — RegisterCommand : crée Tenant + ApplicationUser + période d'essai 60j
 public record RegisterCommand(string Email, string Password, string? CompanyName)

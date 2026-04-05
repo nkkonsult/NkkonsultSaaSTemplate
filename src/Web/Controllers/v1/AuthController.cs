@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
-using Hoplo.Application.Auth.Commands;
-using Hoplo.Shared.DTOs;
-using Hoplo.Shared.Requests;
+using Nkkonsult.Application.Auth.Commands;
+using Nkkonsult.Shared.DTOs;
+using Nkkonsult.Shared.Requests;
 
-namespace Hoplo.Web.Controllers.v1;
+namespace Nkkonsult.Web.Controllers.v1;
 
 // T6.1 — AuthController : endpoints auth PUBLICS (sans [Authorize])
 [ApiController]

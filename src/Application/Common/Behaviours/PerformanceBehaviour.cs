@@ -1,9 +1,9 @@
 using System.Diagnostics;
 using System.Reflection;
-using Hoplo.Application.Common.Interfaces;
+using Nkkonsult.Application.Common.Interfaces;
 using Microsoft.Extensions.Logging;
 
-namespace Hoplo.Application.Common.Behaviours;
+namespace Nkkonsult.Application.Common.Behaviours;
 
 public class PerformanceBehaviour<TMessage, TResponse> : IPipelineBehavior<TMessage, TResponse>
     where TMessage : notnull, IMessage
@@ -46,7 +46,7 @@ public class PerformanceBehaviour<TMessage, TResponse> : IPipelineBehavior<TMess
                 userName = await _identityService.GetUserNameAsync(userId);
             }
 
-            _logger.LogWarning("Hoplo Long Running Request: {Name} ({ElapsedMilliseconds} milliseconds) {@UserId} {@UserName} {@Request}",
+            _logger.LogWarning("Nkkonsult Long Running Request: {Name} ({ElapsedMilliseconds} milliseconds) {@UserId} {@UserName} {@Request}",
                 requestName, elapsedMilliseconds, userId, userName, RedactSensitive(message));
         }
 

@@ -1,4 +1,4 @@
-namespace Hoplo.Shared.DTOs;
+namespace Nkkonsult.Shared.DTOs;
 
 public record InvitationDto(
     string Email,

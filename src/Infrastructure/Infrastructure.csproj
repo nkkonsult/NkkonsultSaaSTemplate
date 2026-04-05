@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <RootNamespace>Hoplo.Infrastructure</RootNamespace>
-    <AssemblyName>Hoplo.Infrastructure</AssemblyName>
+    <RootNamespace>Nkkonsult.Infrastructure</RootNamespace>
+    <AssemblyName>Nkkonsult.Infrastructure</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>

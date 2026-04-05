@@ -1,4 +1,4 @@
-﻿namespace Hoplo.Application.Common.Exceptions;
+﻿namespace Nkkonsult.Application.Common.Exceptions;
 
 public class ForbiddenAccessException : Exception
 {

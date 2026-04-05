@@ -2,13 +2,13 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
-using Hoplo.Application.Common.Interfaces;
-using Hoplo.Infrastructure.Data;
+using Nkkonsult.Application.Common.Interfaces;
+using Nkkonsult.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 
-namespace Hoplo.Infrastructure.Services;
+namespace Nkkonsult.Infrastructure.Services;
 
 // T3.1 — TokenService : génère JWT (15min) + refresh token GUID (7j)
 public class TokenService : ITokenService

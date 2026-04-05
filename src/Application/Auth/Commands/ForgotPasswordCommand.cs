@@ -1,6 +1,6 @@
-using Hoplo.Application.Common.Interfaces;
+using Nkkonsult.Application.Common.Interfaces;
 
-namespace Hoplo.Application.Auth.Commands;
+namespace Nkkonsult.Application.Auth.Commands;
 
 public record ForgotPasswordCommand(string Email) : IRequest<bool>;
 

@@ -1,11 +1,11 @@
-using Hoplo.Application.Common.Interfaces;
-using Hoplo.Domain.Entities;
-using Hoplo.Infrastructure.Identity;
+using Nkkonsult.Application.Common.Interfaces;
+using Nkkonsult.Domain.Entities;
+using Nkkonsult.Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace Hoplo.Infrastructure.Data;
+namespace Nkkonsult.Infrastructure.Data;
 
 public class AppDbContext : IdentityDbContext<ApplicationUser, IdentityRole<Guid>, Guid>, IApplicationDbContext
 {

@@ -1,4 +1,4 @@
-namespace Hoplo.Domain.Enums;
+namespace Nkkonsult.Domain.Enums;
 
 public enum UserRole
 {

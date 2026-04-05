@@ -1,9 +1,9 @@
-using Hoplo.Application.Common.Interfaces;
-using Hoplo.Domain.Constants;
-using Hoplo.Infrastructure.Data;
-using Hoplo.Infrastructure.Data.Interceptors;
-using Hoplo.Infrastructure.Identity;
-using Hoplo.Infrastructure.Services;
+using Nkkonsult.Application.Common.Interfaces;
+using Nkkonsult.Domain.Constants;
+using Nkkonsult.Infrastructure.Data;
+using Nkkonsult.Infrastructure.Data.Interceptors;
+using Nkkonsult.Infrastructure.Identity;
+using Nkkonsult.Infrastructure.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;

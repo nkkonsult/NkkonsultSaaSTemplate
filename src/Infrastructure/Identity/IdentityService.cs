@@ -1,10 +1,10 @@
-using Hoplo.Application.Common.Interfaces;
-using Hoplo.Application.Common.Models;
+using Nkkonsult.Application.Common.Interfaces;
+using Nkkonsult.Application.Common.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-namespace Hoplo.Infrastructure.Identity;
+namespace Nkkonsult.Infrastructure.Identity;
 
 public class IdentityService : IIdentityService
 {

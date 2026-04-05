@@ -1,10 +1,10 @@
-﻿using Hoplo.Application.Common.Interfaces;
-using Hoplo.Domain.Common;
+﻿using Nkkonsult.Application.Common.Interfaces;
+using Nkkonsult.Domain.Common;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 
-namespace Hoplo.Infrastructure.Data.Interceptors;
+namespace Nkkonsult.Infrastructure.Data.Interceptors;
 
 public class AuditableEntityInterceptor : SaveChangesInterceptor
 {

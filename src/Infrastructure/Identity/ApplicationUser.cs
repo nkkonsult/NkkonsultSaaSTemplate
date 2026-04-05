@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Identity;
-using Hoplo.Domain.Entities;
-using Hoplo.Domain.Enums;
+using Nkkonsult.Domain.Entities;
+using Nkkonsult.Domain.Enums;
 
-namespace Hoplo.Infrastructure.Identity;
+namespace Nkkonsult.Infrastructure.Identity;
 
 // Note architecturale : ApplicationUser conservé dans Infrastructure (Clean Architecture).
 // La story 1.3 spécifie Domain/Entities mais IdentityUser<Guid> est une dépendance

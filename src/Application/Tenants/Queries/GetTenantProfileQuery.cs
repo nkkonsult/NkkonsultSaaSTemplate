@@ -1,7 +1,7 @@
-using Hoplo.Application.Common.Interfaces;
-using Hoplo.Domain.Entities;
+using Nkkonsult.Application.Common.Interfaces;
+using Nkkonsult.Domain.Entities;
 
-namespace Hoplo.Application.Tenants.Queries;
+namespace Nkkonsult.Application.Tenants.Queries;
 
 // T5.4 — Retourner le profil du tenant courant (utilisé par GET /api/v1/tenants/me)
 public record GetTenantProfileQuery : IRequest<TenantProfileDto>;

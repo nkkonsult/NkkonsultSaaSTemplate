@@ -1,9 +1,9 @@
 using System.Text;
 using System.Text.Json.Serialization;
 using Azure.Identity;
-using Hoplo.Application.Common.Interfaces;
-using Hoplo.Infrastructure.Data;
-using Hoplo.Web.Services;
+using Nkkonsult.Application.Common.Interfaces;
+using Nkkonsult.Infrastructure.Data;
+using Nkkonsult.Web.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;

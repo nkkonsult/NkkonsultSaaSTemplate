@@ -1,4 +1,4 @@
-namespace Hoplo.Shared.DTOs;
+namespace Nkkonsult.Shared.DTOs;
 
 // T5.4 — DTO renvoyé par GET /api/v1/tenants/me
 public record TenantDto(

@@ -1,11 +1,11 @@
 using Ardalis.GuardClauses;
-using Hoplo.Application.Common.Interfaces;
-using Hoplo.Application.Team.Queries;
-using Hoplo.Infrastructure.Data;
+using Nkkonsult.Application.Common.Interfaces;
+using Nkkonsult.Application.Team.Queries;
+using Nkkonsult.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Mediator;
 
-namespace Hoplo.Infrastructure.Team;
+namespace Nkkonsult.Infrastructure.Team;
 
 public class GetTeamMembersQueryHandler : IRequestHandler<GetTeamMembersQuery, TeamMembersResult>
 {

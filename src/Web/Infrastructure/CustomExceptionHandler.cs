@@ -1,8 +1,8 @@
-﻿using Hoplo.Application.Common.Exceptions;
+﻿using Nkkonsult.Application.Common.Exceptions;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Hoplo.Web.Infrastructure;
+namespace Nkkonsult.Web.Infrastructure;
 
 public class CustomExceptionHandler : IExceptionHandler
 {

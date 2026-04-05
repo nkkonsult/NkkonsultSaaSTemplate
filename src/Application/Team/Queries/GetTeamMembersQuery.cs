@@ -1,6 +1,6 @@
 using Mediator;
 
-namespace Hoplo.Application.Team.Queries;
+namespace Nkkonsult.Application.Team.Queries;
 
 public record TeamMemberResult(Guid UserId, string Email, string FirstName, string LastName, string Role, string Status, string? ProfilePhotoUrl);
 public record InvitationResult(string Email, DateTime ExpiresAt, string Status);

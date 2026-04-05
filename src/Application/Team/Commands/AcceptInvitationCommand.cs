@@ -1,7 +1,7 @@
-using Hoplo.Application.Common.Interfaces;
+using Nkkonsult.Application.Common.Interfaces;
 using Mediator;
 
-namespace Hoplo.Application.Team.Commands;
+namespace Nkkonsult.Application.Team.Commands;
 
 public record AcceptInvitationCommand(Guid Token, string Email, string Password)
     : IRequest<AuthResult?>, ISensitiveRequest

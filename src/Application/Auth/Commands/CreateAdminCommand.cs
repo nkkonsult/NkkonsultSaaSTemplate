@@ -1,7 +1,7 @@
-using Hoplo.Application.Common.Interfaces;
+using Nkkonsult.Application.Common.Interfaces;
 using Mediator;
 
-namespace Hoplo.Application.Auth.Commands;
+namespace Nkkonsult.Application.Auth.Commands;
 
 public record CreateAdminCommand(string Email, string Password)
     : IRequest<AuthResult?>, ISensitiveRequest

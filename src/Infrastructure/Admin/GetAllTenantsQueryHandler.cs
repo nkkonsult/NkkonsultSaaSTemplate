@@ -1,11 +1,11 @@
-using Hoplo.Application.Admin.Queries;
-using Hoplo.Domain.Enums;
-using Hoplo.Infrastructure.Data;
-using Hoplo.Infrastructure.Identity;
+using Nkkonsult.Application.Admin.Queries;
+using Nkkonsult.Domain.Enums;
+using Nkkonsult.Infrastructure.Data;
+using Nkkonsult.Infrastructure.Identity;
 using Mediator;
 using Microsoft.EntityFrameworkCore;
 
-namespace Hoplo.Infrastructure.Admin;
+namespace Nkkonsult.Infrastructure.Admin;
 
 public class GetAllTenantsQueryHandler : IRequestHandler<GetAllTenantsQuery, GetAllTenantsQueryResult>
 {
@@ -30,7 +30,7 @@ public class GetAllTenantsQueryHandler : IRequestHandler<GetAllTenantsQuery, Get
             from tenant in tenantsQuery
             join owner in _context.Users
                 .IgnoreQueryFilters()
-                .Where(u => u.Role == UserRole.Patron && u.IsActive)
+                .Where(u => u.Role == UserRole.Owner && u.IsActive)
                 on tenant.Id equals owner.TenantId into owners
             from owner in owners.DefaultIfEmpty()
             select new { Tenant = tenant, OwnerEmail = owner != null ? owner.Email ?? string.Empty : string.Empty };

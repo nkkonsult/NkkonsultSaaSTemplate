@@ -1,11 +1,11 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Hoplo.Application.Users.Commands;
-using Hoplo.Application.Users.Queries;
-using Hoplo.Shared.DTOs;
-using Hoplo.Shared.Requests;
+using Nkkonsult.Application.Users.Commands;
+using Nkkonsult.Application.Users.Queries;
+using Nkkonsult.Shared.DTOs;
+using Nkkonsult.Shared.Requests;
 
-namespace Hoplo.Web.Controllers.v1;
+namespace Nkkonsult.Web.Controllers.v1;
 
 [ApiController]
 [Route("api/v1/users")]

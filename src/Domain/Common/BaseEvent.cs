@@ -1,6 +1,6 @@
 ﻿using Mediator;
 
-namespace Hoplo.Domain.Common;
+namespace Nkkonsult.Domain.Common;
 
 public abstract class BaseEvent : INotification
 {

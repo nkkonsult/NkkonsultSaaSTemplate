@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.OpenApi;
 using Microsoft.OpenApi;
 
-namespace Hoplo.Web.Infrastructure;
+namespace Nkkonsult.Web.Infrastructure;
 
 internal sealed class ApiExceptionOperationTransformer : IOpenApiOperationTransformer
 {

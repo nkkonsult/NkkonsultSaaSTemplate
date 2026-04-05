@@ -1,14 +1,14 @@
 using System.Security.Cryptography;
 using System.Text;
-using Hoplo.Application.Common.Interfaces;
-using Hoplo.Domain.Entities;
-using Hoplo.Domain.Enums;
-using Hoplo.Infrastructure.Data;
-using Hoplo.Infrastructure.Identity;
+using Nkkonsult.Application.Common.Interfaces;
+using Nkkonsult.Domain.Entities;
+using Nkkonsult.Domain.Enums;
+using Nkkonsult.Infrastructure.Data;
+using Nkkonsult.Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-namespace Hoplo.Infrastructure.Services;
+namespace Nkkonsult.Infrastructure.Services;
 
 // Implémentation IAuthService — gère Register, Login, Refresh avec Identity + TokenService
 public class AuthService : IAuthService
@@ -264,7 +264,7 @@ public class AuthService : IAuthService
             UserName = email,
             Email = email,
             TenantId = Guid.Empty,
-            Role = UserRole.AdminSysteme,
+            Role = UserRole.SystemAdmin,
             IsActive = true,
             FirstName = string.Empty,
             LastName = string.Empty
@@ -273,8 +273,8 @@ public class AuthService : IAuthService
         var result = await _userManager.CreateAsync(user, password);
         if (!result.Succeeded) return null;
 
-        await _userManager.AddToRoleAsync(user, "AdminSystème");
-        return await GenerateAuthResultAsync(user, "AdminSystème");
+        await _userManager.AddToRoleAsync(user, "SystemAdmin");
+        return await GenerateAuthResultAsync(user, "SystemAdmin");
     }
 
     // Génère un code OTP 6 chiffres pour le reset password

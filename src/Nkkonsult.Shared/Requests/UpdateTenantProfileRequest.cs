@@ -1,4 +1,4 @@
-namespace Hoplo.Shared.Requests;
+namespace Nkkonsult.Shared.Requests;
 
 // T2.2 — Request body pour PUT /api/v1/tenants/profile
 public record UpdateTenantProfileRequest(

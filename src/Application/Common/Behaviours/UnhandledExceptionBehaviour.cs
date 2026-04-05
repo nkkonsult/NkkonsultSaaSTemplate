@@ -1,9 +1,9 @@
 using System.Reflection;
 using Ardalis.GuardClauses;
-using Hoplo.Application.Common.Interfaces;
+using Nkkonsult.Application.Common.Interfaces;
 using Microsoft.Extensions.Logging;
 
-namespace Hoplo.Application.Common.Behaviours;
+namespace Nkkonsult.Application.Common.Behaviours;
 
 public class UnhandledExceptionBehaviour<TMessage, TResponse> : IPipelineBehavior<TMessage, TResponse>
     where TMessage : notnull, IMessage
@@ -30,7 +30,7 @@ public class UnhandledExceptionBehaviour<TMessage, TResponse> : IPipelineBehavio
         {
             var requestName = typeof(TMessage).Name;
 
-            _logger.LogError(ex, "Hoplo Request: Unhandled Exception for Request {Name} {@Request}", requestName, RedactSensitive(message));
+            _logger.LogError(ex, "Nkkonsult Request: Unhandled Exception for Request {Name} {@Request}", requestName, RedactSensitive(message));
 
             throw;
         }

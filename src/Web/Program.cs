@@ -1,6 +1,6 @@
-using Hoplo.Infrastructure.Data;
-using Hoplo.Infrastructure.Identity;
-using Hoplo.Web.Middleware;
+using Nkkonsult.Infrastructure.Data;
+using Nkkonsult.Infrastructure.Identity;
+using Nkkonsult.Web.Middleware;
 using Scalar.AspNetCore;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Identity;

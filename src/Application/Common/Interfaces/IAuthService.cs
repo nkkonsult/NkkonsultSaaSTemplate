@@ -1,6 +1,6 @@
-using Hoplo.Domain.Enums;
+using Nkkonsult.Domain.Enums;
 
-namespace Hoplo.Application.Common.Interfaces;
+namespace Nkkonsult.Application.Common.Interfaces;
 
 // Résultat d'authentification local à Application (le contrôleur mappe vers AuthResponseDto)
 public record AuthResult(

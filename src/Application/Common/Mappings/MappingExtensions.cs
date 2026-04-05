@@ -1,6 +1,6 @@
-﻿using Hoplo.Application.Common.Models;
+﻿using Nkkonsult.Application.Common.Models;
 
-namespace Hoplo.Application.Common.Mappings;
+namespace Nkkonsult.Application.Common.Mappings;
 
 public static class MappingExtensions
 {

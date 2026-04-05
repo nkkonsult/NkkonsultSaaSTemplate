@@ -1,8 +1,8 @@
 using System.Reflection;
-using Hoplo.Application.Common.Interfaces;
+using Nkkonsult.Application.Common.Interfaces;
 using Microsoft.Extensions.Logging;
 
-namespace Hoplo.Application.Common.Behaviours;
+namespace Nkkonsult.Application.Common.Behaviours;
 
 public class LoggingBehaviour<TMessage, TResponse> : IPipelineBehavior<TMessage, TResponse>
     where TMessage : notnull, IMessage
@@ -29,7 +29,7 @@ public class LoggingBehaviour<TMessage, TResponse> : IPipelineBehavior<TMessage,
             userName = await _identityService.GetUserNameAsync(userId);
         }
 
-        _logger.LogInformation("Hoplo Request: {Name} {@UserId} {@UserName} {@Request}",
+        _logger.LogInformation("Nkkonsult Request: {Name} {@UserId} {@UserName} {@Request}",
             requestName, userId, userName, BuildLogPayload(message));
 
         return await next(message, cancellationToken);
