@@ -21,7 +21,7 @@ public class RemoveTechnicianCommandHandler : IRequestHandler<RemoveTechnicianCo
 
     public async ValueTask<Unit> Handle(RemoveTechnicianCommand request, CancellationToken cancellationToken)
     {
-        // M2 — Protection self-delete : un Patron ne peut pas se retirer lui-même
+        // M2 — Protection self-delete : un Owner ne peut pas se retirer lui-même
         if (Guid.TryParse(_currentUser.Id, out var currentUserId) && currentUserId == request.UserId)
             throw new InvalidOperationException("Un patron ne peut pas se retirer de sa propre équipe.");
 
@@ -31,7 +31,7 @@ public class RemoveTechnicianCommandHandler : IRequestHandler<RemoveTechnicianCo
 
         Guard.Against.NotFound(request.UserId, user);
 
-        // M2 — Vérification de rôle : seuls les Techniciens peuvent être retirés
+        // M2 — Vérification de rôle : seuls les Members peuvent être retirés
         if (user.Role != UserRole.Member)
             throw new InvalidOperationException("Seuls les techniciens peuvent être retirés de l'équipe.");
 

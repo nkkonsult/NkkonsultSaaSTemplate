@@ -241,7 +241,7 @@ public class AuthService : IAuthService
         return true;
     }
 
-    // Bootstrap — Crée le compte AdminSystème
+    // Bootstrap — Crée le compte SystemAdmin
     // TenantId = Guid.Empty → nécessite un tenant système sentinel en base (FK constraint)
     public async Task<AuthResult?> CreateAdminAsync(string email, string password)
     {

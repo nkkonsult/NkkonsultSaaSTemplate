@@ -20,7 +20,7 @@ public class GetAllTenantsQueryHandler : IRequestHandler<GetAllTenantsQuery, Get
         GetAllTenantsQuery request,
         CancellationToken cancellationToken)
     {
-        // IgnoreQueryFilters() justifié : rôle AdminSystème — accès cross-tenant intentionnel
+        // IgnoreQueryFilters() justifié : rôle SystemAdmin — accès cross-tenant intentionnel
         var tenantsQuery = _context.Tenants
             .IgnoreQueryFilters()
             .Where(t => !t.IsDeleted);  // soft-delete manuel car QueryFilter ignoré

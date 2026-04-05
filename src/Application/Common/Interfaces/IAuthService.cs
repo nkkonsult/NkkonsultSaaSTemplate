@@ -30,7 +30,7 @@ public interface IAuthService
     /// <summary>Accepte une invitation : crée ou met à jour l'utilisateur, retourne les tokens.</summary>
     Task<AuthResult?> AcceptInvitationAsync(Guid token, string email, string password, CancellationToken cancellationToken = default);
 
-    /// <summary>Crée le compte AdminSystème protégé par le bootstrap token.</summary>
+    /// <summary>Crée le compte SystemAdmin protégé par le bootstrap token.</summary>
     Task<AuthResult?> CreateAdminAsync(string email, string password);
 
     /// <summary>Crée un compte utilisateur pour un invité avec mot de passe aléatoire. Retourne true si créé, false si l'utilisateur existe déjà.</summary>

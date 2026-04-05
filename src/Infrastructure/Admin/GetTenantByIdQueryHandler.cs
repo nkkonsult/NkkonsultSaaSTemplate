@@ -19,7 +19,7 @@ public class GetTenantByIdQueryHandler : IRequestHandler<GetTenantByIdQuery, Adm
         GetTenantByIdQuery request,
         CancellationToken cancellationToken)
     {
-        // IgnoreQueryFilters() justifié : rôle AdminSystème — accès cross-tenant intentionnel
+        // IgnoreQueryFilters() justifié : rôle SystemAdmin — accès cross-tenant intentionnel
         var tenant = await _context.Tenants
             .IgnoreQueryFilters()
             .Where(t => !t.IsDeleted && t.Id == request.TenantId)
