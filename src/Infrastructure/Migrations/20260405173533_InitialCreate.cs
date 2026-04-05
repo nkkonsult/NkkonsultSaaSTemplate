@@ -13,25 +13,6 @@ namespace Nkkonsult.Infrastructure.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "articles",
-                columns: table => new
-                {
-                    id = table.Column<Guid>(type: "uuid", nullable: false),
-                    name = table.Column<string>(type: "text", nullable: false),
-                    unit_price = table.Column<decimal>(type: "numeric", nullable: false),
-                    is_active = table.Column<bool>(type: "boolean", nullable: false),
-                    tenant_id = table.Column<Guid>(type: "uuid", nullable: false),
-                    created_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    updated_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    is_deleted = table.Column<bool>(type: "boolean", nullable: false),
-                    deleted_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("pk_articles", x => x.id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "AspNetRoles",
                 columns: table => new
                 {
@@ -43,58 +24,6 @@ namespace Nkkonsult.Infrastructure.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("pk_asp_net_roles", x => x.id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "audit_events",
-                columns: table => new
-                {
-                    id = table.Column<Guid>(type: "uuid", nullable: false),
-                    intervention_id = table.Column<Guid>(type: "uuid", nullable: false),
-                    tenant_id = table.Column<Guid>(type: "uuid", nullable: false),
-                    user_id = table.Column<Guid>(type: "uuid", nullable: false),
-                    event_type = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
-                    payload_json = table.Column<string>(type: "text", nullable: false),
-                    occurred_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("pk_audit_events", x => x.id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "interventions",
-                columns: table => new
-                {
-                    id = table.Column<Guid>(type: "uuid", nullable: false),
-                    description = table.Column<string>(type: "character varying(2000)", maxLength: 2000, nullable: false),
-                    client_name = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
-                    client_phone = table.Column<string>(type: "character varying(20)", maxLength: 20, nullable: true),
-                    client_address = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: true),
-                    status = table.Column<int>(type: "integer", nullable: false),
-                    technician_id = table.Column<Guid>(type: "uuid", nullable: true),
-                    scheduled_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    notes = table.Column<string>(type: "character varying(5000)", maxLength: 5000, nullable: true),
-                    patron_notes = table.Column<string>(type: "character varying(5000)", maxLength: 5000, nullable: true),
-                    closed_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    duree_nette_minutes = table.Column<int>(type: "integer", nullable: true),
-                    impossible_reason = table.Column<int>(type: "integer", nullable: true),
-                    impossible_detail = table.Column<string>(type: "character varying(1000)", maxLength: 1000, nullable: true),
-                    proof_photo_id = table.Column<Guid>(type: "uuid", nullable: true),
-                    timer_started_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    timer_paused_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    timer_stopped_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    timer_paused_total_seconds = table.Column<double>(type: "double precision", nullable: false, defaultValue: 0.0),
-                    timer_net_duration_seconds = table.Column<double>(type: "double precision", nullable: true),
-                    tenant_id = table.Column<Guid>(type: "uuid", nullable: false),
-                    created_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    updated_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    is_deleted = table.Column<bool>(type: "boolean", nullable: false),
-                    deleted_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("pk_interventions", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
@@ -116,29 +45,18 @@ namespace Nkkonsult.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "notifications",
-                columns: table => new
-                {
-                    id = table.Column<Guid>(type: "uuid", nullable: false),
-                    user_id = table.Column<Guid>(type: "uuid", nullable: false),
-                    type = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
-                    payload_json = table.Column<string>(type: "text", nullable: false),
-                    created_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    read_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("pk_notifications", x => x.id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "tenants",
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uuid", nullable: false),
                     name = table.Column<string>(type: "text", nullable: false),
                     siret = table.Column<string>(type: "text", nullable: false),
+                    siren = table.Column<string>(type: "text", nullable: true),
                     logo_url = table.Column<string>(type: "text", nullable: true),
+                    address = table.Column<string>(type: "text", nullable: true),
+                    postal_code = table.Column<string>(type: "text", nullable: true),
+                    city = table.Column<string>(type: "text", nullable: true),
+                    vat_number = table.Column<string>(type: "text", nullable: true),
                     trial_end_date = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     is_active = table.Column<bool>(type: "boolean", nullable: false),
                     onboarding_complete = table.Column<bool>(type: "boolean", nullable: false),
@@ -173,65 +91,6 @@ namespace Nkkonsult.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "devis",
-                columns: table => new
-                {
-                    id = table.Column<Guid>(type: "uuid", nullable: false),
-                    intervention_id = table.Column<Guid>(type: "uuid", nullable: false),
-                    tva10 = table.Column<bool>(type: "boolean", nullable: false, defaultValue: false),
-                    signed_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    signature_uri = table.Column<string>(type: "character varying(2048)", maxLength: 2048, nullable: true),
-                    signature_hash = table.Column<string>(type: "character varying(64)", maxLength: 64, nullable: true),
-                    signature_latitude = table.Column<double>(type: "double precision", nullable: true),
-                    signature_longitude = table.Column<double>(type: "double precision", nullable: true),
-                    tenant_id = table.Column<Guid>(type: "uuid", nullable: false),
-                    created_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    updated_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    is_deleted = table.Column<bool>(type: "boolean", nullable: false),
-                    deleted_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("pk_devis", x => x.id);
-                    table.ForeignKey(
-                        name: "fk_devis_interventions_intervention_id",
-                        column: x => x.intervention_id,
-                        principalTable: "interventions",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "photos",
-                columns: table => new
-                {
-                    id = table.Column<Guid>(type: "uuid", nullable: false),
-                    intervention_id = table.Column<Guid>(type: "uuid", nullable: false),
-                    storage_url = table.Column<string>(type: "character varying(2048)", maxLength: 2048, nullable: false),
-                    hash = table.Column<string>(type: "character(64)", fixedLength: true, maxLength: 64, nullable: false),
-                    latitude = table.Column<double>(type: "double precision", nullable: true),
-                    longitude = table.Column<double>(type: "double precision", nullable: true),
-                    captured_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    tag = table.Column<int>(type: "integer", nullable: false),
-                    is_certified = table.Column<bool>(type: "boolean", nullable: false),
-                    tenant_id = table.Column<Guid>(type: "uuid", nullable: false),
-                    created_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    updated_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    is_deleted = table.Column<bool>(type: "boolean", nullable: false),
-                    deleted_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("pk_photos", x => x.id);
-                    table.ForeignKey(
-                        name: "fk_photos_interventions_intervention_id",
-                        column: x => x.intervention_id,
-                        principalTable: "interventions",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "AspNetUsers",
                 columns: table => new
                 {
@@ -241,6 +100,7 @@ namespace Nkkonsult.Infrastructure.Migrations
                     last_name = table.Column<string>(type: "text", nullable: false),
                     role = table.Column<int>(type: "integer", nullable: false),
                     is_active = table.Column<bool>(type: "boolean", nullable: false),
+                    profile_photo_url = table.Column<string>(type: "text", nullable: true),
                     user_name = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
                     normalized_user_name = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
                     email = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
@@ -265,28 +125,6 @@ namespace Nkkonsult.Infrastructure.Migrations
                         principalTable: "tenants",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "lignes_devis",
-                columns: table => new
-                {
-                    id = table.Column<Guid>(type: "uuid", nullable: false),
-                    devis_id = table.Column<Guid>(type: "uuid", nullable: false),
-                    nom = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
-                    prix_unitaire = table.Column<decimal>(type: "numeric(10,2)", nullable: false),
-                    quantite = table.Column<int>(type: "integer", nullable: false),
-                    ordre = table.Column<int>(type: "integer", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("pk_lignes_devis", x => x.id);
-                    table.ForeignKey(
-                        name: "fk_lignes_devis_devis_devis_id",
-                        column: x => x.devis_id,
-                        principalTable: "devis",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -375,6 +213,30 @@ namespace Nkkonsult.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "login_codes",
+                columns: table => new
+                {
+                    id = table.Column<Guid>(type: "uuid", nullable: false),
+                    user_id = table.Column<Guid>(type: "uuid", nullable: false),
+                    code_hash = table.Column<string>(type: "text", nullable: false),
+                    expires_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    attempts = table.Column<int>(type: "integer", nullable: false),
+                    is_used = table.Column<bool>(type: "boolean", nullable: false),
+                    created_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    purpose = table.Column<string>(type: "text", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("pk_login_codes", x => x.id);
+                    table.ForeignKey(
+                        name: "fk_login_codes_asp_net_users_user_id",
+                        column: x => x.user_id,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "refresh_tokens",
                 columns: table => new
                 {
@@ -439,40 +301,9 @@ namespace Nkkonsult.Infrastructure.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "idx_audit_events_intervention_id_occurred_at",
-                table: "audit_events",
-                columns: new[] { "intervention_id", "occurred_at" });
-
-            migrationBuilder.CreateIndex(
-                name: "ix_devis_intervention_id",
-                table: "devis",
-                column: "intervention_id",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "ix_interventions_tenant_created",
-                table: "interventions",
-                columns: new[] { "tenant_id", "created_at" });
-
-            migrationBuilder.CreateIndex(
-                name: "ix_interventions_tenant_status",
-                table: "interventions",
-                columns: new[] { "tenant_id", "status" });
-
-            migrationBuilder.CreateIndex(
-                name: "ix_lignes_devis_devis_id",
-                table: "lignes_devis",
-                column: "devis_id");
-
-            migrationBuilder.CreateIndex(
-                name: "idx_notifications_user_id_read_at",
-                table: "notifications",
-                columns: new[] { "user_id", "read_at" });
-
-            migrationBuilder.CreateIndex(
-                name: "idx_photos_intervention_id",
-                table: "photos",
-                column: "intervention_id");
+                name: "ix_login_codes_user_id",
+                table: "login_codes",
+                column: "user_id");
 
             migrationBuilder.CreateIndex(
                 name: "ix_refresh_tokens_user_id",
@@ -489,9 +320,6 @@ namespace Nkkonsult.Infrastructure.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "articles");
-
-            migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
 
             migrationBuilder.DropTable(
@@ -507,19 +335,10 @@ namespace Nkkonsult.Infrastructure.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "audit_events");
-
-            migrationBuilder.DropTable(
                 name: "invitations");
 
             migrationBuilder.DropTable(
-                name: "lignes_devis");
-
-            migrationBuilder.DropTable(
-                name: "notifications");
-
-            migrationBuilder.DropTable(
-                name: "photos");
+                name: "login_codes");
 
             migrationBuilder.DropTable(
                 name: "refresh_tokens");
@@ -528,13 +347,7 @@ namespace Nkkonsult.Infrastructure.Migrations
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
-                name: "devis");
-
-            migrationBuilder.DropTable(
                 name: "AspNetUsers");
-
-            migrationBuilder.DropTable(
-                name: "interventions");
 
             migrationBuilder.DropTable(
                 name: "tenants");
